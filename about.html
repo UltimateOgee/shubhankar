@@ -53,38 +53,12 @@
             text-align: center;
         }
 
-        .masthead {
-            padding: 3em 0;
-            background-color: #5c0202;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
         .masthead-intro {
             /* Layout Declarations */
             margin-bottom: 0.1em;
             /* Typography Declarations */
             font-family: "Gentium Book Basic", Georgia, serif;
             font-size: 2em;
-        }
-
-        .masthead-heading {
-            /* Layout Declarations */
-            color: #F7EDE1;
-            margin-top: -0.2em;
-            /* Typography Declarations */
-            font-family: "Open Sans", "Helvetica Neue", sans-serif;
-            font-weight: bold;
-            font-size: 6em;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-        }
-
-        .introduction-section {
-            max-width: 38em;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 2em;
         }
 
         .introduction-section>p,
@@ -112,18 +86,21 @@
         }
 
         .masthead-intro {
+            margin-top: 20px;
             margin-bottom: 0.1em;
             font-family: "Gentium Book Basic", Georgia, serif;
             font-size: 2em;
         }
 
         .masthead-heading {
-            margin-top: -0.2em;
+            color: #F7EDE1;
+            margin-top: -0.15em;
             font-family: "Open Sans", "Helvetica Neue", sans-serif;
             font-weight: bold;
-            font-size: 6em;
+            font-size: 4em;
             letter-spacing: -0.02em;
             text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
         .introduction>p,
@@ -134,10 +111,10 @@
         }
 
         .introduction-section {
-            max-width: 38em;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 2em;
+            margin-top: 25px;
         }
 
         h1 {
@@ -150,7 +127,7 @@
             text-align: center;
             background-color: #723130;
             text-decoration: none;
-            position: fixed;
+            position: absolute;
             Width: 100%;
             bottom: 0;
         }
@@ -200,53 +177,69 @@
 
         .introduction {
             grid-area: introduction;
+            margin-right: 20px;
         }
 
         .content {
             grid-area: content;
             border-top: solid 1px #723130;
-            margin-top: 15px;
+            margin-top: 25px;
         }
 
         img {
-            border-radius: 50%;
+            border-radius: 10%;
+        }
+
+        #page-container {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #content-wrap {
+            padding-bottom: 2.5rem;
+            /* Footer height */
         }
     </style>
 </head>
 
 <body>
-    <ul class="topnav">
-        <li><a href="/resume">Resume</a></li>
-        <li><a href="/resume/about.html">About</a></li>
-    </ul>
-    <header class='masthead'>
-        <p class='masthead-intro'>Hi I'm</p>
-        <h1 class='masthead-heading'>Shubhankar Singh</h1>
-    </header>
-    <section class="introduction-section">
-        <div class="grid-container">
-            <div class="headshot">
-                <img src="square_headshot.png" alt="Shubhankar Singh Headshot" style="width:200px">
-            </div>
-            <div class="introduction">
-                <h1>Introduction</h1>
-                <p>intro text<p>
-            </div>
-            <div class="content">
-                <h1>Content</h1>
-                <p>content text<p>
-            </div>
+    <div id="page-container">
+        <div id="content-wrap">
+            <ul class="topnav">
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/resume/about.html">About</a></li>
+            </ul>
+            <header class='masthead'>
+                <p class='masthead-intro'>Hi I'm</p>
+                <h1 class='masthead-heading'>Shubhankar Singh</h1>
+            </header>
+            <section class="introduction-section">
+                <div class="grid-container">
+                    <div class="headshot">
+                        <img src="square_headshot.png" alt="Shubhankar Singh Headshot" style="width:200px">
+                    </div>
+                    <div class="introduction">
+                        <h1>Introduction</h1>
+                        <p>intro text
+                        <p>
+                    </div>
+                    <div class="content">
+                        <h1>Content</h1>
+                        <p>content text
+                        <p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <footer class="content-footer">
-        <ul class="social">
-            <li><a class="footerlinks" href="mailto:ssingh3@trinity.edu">Email</a></li>
-            <li><a class="footerlinks" target="_blank" href="www.linkedin.com/in/shubhankarsingh3">LinkedIn</a></li>
-            <li><a class="footerlinks" target="_blank" href="github.com/UltimateOgee">GitHub</a></li>
-            <li><a class="footerlinks" target="_blank" href="www.instagram.com/shubhsingh64/">Instragram</a></li>
-        </ul>
-    </footer>
+        <footer class="content-footer">
+            <ul class="social">
+                <li><a class="footerlinks" href="mailto:ssingh3@trinity.edu">Email</a></li>
+                <li><a class="footerlinks" target="_blank" href="www.linkedin.com/in/shubhankarsingh3">LinkedIn</a></li>
+                <li><a class="footerlinks" target="_blank" href="github.com/UltimateOgee">GitHub</a></li>
+                <li><a class="footerlinks" target="_blank" href="www.instagram.com/shubhsingh64/">Instragram</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 
 </html>
