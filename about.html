@@ -54,11 +54,10 @@
         }
 
         .masthead {
-            padding: 6em 0;
-            background-image: url('https://i.imgur.com/yGmrlyg.jpg');
+            padding: 3em 0;
+            background-color: #5c0202;
             background-size: cover;
             background-repeat: no-repeat;
-            border-top: solid 1em #FFCF33;
         }
 
         .masthead-intro {
@@ -71,7 +70,7 @@
 
         .masthead-heading {
             /* Layout Declarations */
-            color: #F1C863;
+            color: #F7EDE1;
             margin-top: -0.2em;
             /* Typography Declarations */
             font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -81,9 +80,7 @@
             text-transform: uppercase;
         }
 
-        .introduction-section,
-        .location-section,
-        .questions-section {
+        .introduction-section {
             max-width: 38em;
             margin-left: auto;
             margin-right: auto;
@@ -91,20 +88,10 @@
         }
 
         .introduction-section>p,
-        .location-section>p,
-        .questions-section,
         .content-footer>p {
             /* Typography Declarations */
             font-weight: 300;
             letter-spacing: 0.05em;
-        }
-
-        .questions-section>h2 {
-            font-family: "Gentium Book Basic", Georgia, serif;
-            font-size: 1.2em;
-            font-weight: bold;
-            /* Layout */
-            margin: 2em 0 1em 0;
         }
 
         section>h1 {
@@ -118,11 +105,10 @@
         }
 
         .masthead {
-            padding: 6em 0;
-            background-image: url('https://i.imgur.com/yGmrlyg.jpg');
+            padding: 1em 0;
+            background-color: #723130;
             background-size: cover;
             background-repeat: no-repeat;
-            border-top: solid 1em #FFCF33;
         }
 
         .masthead-intro {
@@ -141,28 +127,32 @@
         }
 
         .introduction>p,
-        .location>p,
         .content-footer>p {
             /* Typography Declarations */
             font-weight: 300;
             letter-spacing: 0.05em;
         }
 
-        .introduction-section,
-        .location-section,
-        .questions-section {
+        .introduction-section {
             max-width: 38em;
             margin-left: auto;
             margin-right: auto;
             margin-top: 2em;
         }
 
+        h1 {
+            color: #723130;
+        }
+
         .content-footer {
-            margin: 50px 0;
+            margin: 0px 0;
             padding: 20px 0;
             text-align: center;
-            background-color: #73A8C2;
+            background-color: #723130;
             text-decoration: none;
+            position: fixed;
+            Width: 100%;
+            bottom: 0;
         }
 
         .social>li {
@@ -174,10 +164,10 @@
             color: #F7EDE1;
         }
 
-        a {
+        .footerlinks {
             font-weight: bold;
             text-decoration: none;
-            color: #F1C863;
+            color: #F7EDE1;
         }
 
         @media only screen and (max-width: 500px) {
@@ -193,6 +183,32 @@
                 padding: 2em 2.5em;
             }
         }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                "introduction introduction headshot"
+                "content content content";
+        }
+
+        .headshot {
+            grid-area: headshot;
+        }
+
+        .introduction {
+            grid-area: introduction;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        img {
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -203,39 +219,33 @@
     </ul>
     <header class='masthead'>
         <p class='masthead-intro'>Hi I'm</p>
-        <h1 class='masthead-heading'>sHuBh LOL!</h1>
+        <h1 class='masthead-heading'>Shubhankar Singh</h1>
     </header>
     <section class="introduction-section">
-        <h1>Introduction</h1>
-        <p>I am a shwabble dabbler.</p>
-        <p>I love music.</p>
-    </section>
-    <section class="location-section">
-        <h1>Where I'm From</h1>
-        <p>I'm originally from Kanpur, India, but I moved to BOSTON when I was 3 months old. </p>
-    </section>
-    <section class="questions-section">
-        <h1>More About Me</h1>
-        <h2>What are your favorite hobbies?</h2>
-        <p>My favorite hobby shwabble dabbling</p>
-        <h2>What's your dream job?</h2>
-        <p>My dream job to be like a race car driver, i dont know if that valid right now tho.
-        </p>
-        <h2>Where do you live?</h2>
-        <p>I live in Seattle, Washington but im open to relocation. I enjoy travelling anyways.</p>
-        <h2>Why do you want to be a beast?</h2>
-        <p>Because beasts are beastly.</p>
+        <div class="grid-container">
+            <div class="headshot">
+                <img src="headshot.png" alt="Shubhankar Singh Headshot" style="width:200px">
+            </div>
+            <div class="introduction">
+                <h1>Introduction</h1>
+                <p>intro text
+                <p>
+            </div>
+            <div class="content">
+                <h1>Content</h1>
+                <p>content text
+                <p>
+            </div>
+        </div>
     </section>
 
     <footer class="content-footer">
-        <p>Say hi to me on these social networks:</p>
         <ul class="social">
-            <li><a class="css-is-deranged" href="mailto:ssingh3@trinity.edu">Email</a></li>
-            <li><a class="css-is-deranged" href="www.linkedin.com/in/shubhankarsingh3">LinkedIn</a></li>
-            <li><a class="css-is-deranged" href="github.com/UltimateOgee">GitHub</a></li>
-            <li><a class="css-is-deranged" href="www.instagram.com/shubhsingh64/">Instragram</a></li>
+            <li><a class="footerlinks" href="mailto:ssingh3@trinity.edu">Email</a></li>
+            <li><a class="footerlinks" href="www.linkedin.com/in/shubhankarsingh3">LinkedIn</a></li>
+            <li><a class="footerlinks" href="github.com/UltimateOgee">GitHub</a></li>
+            <li><a class="footerlinks" href="www.instagram.com/shubhsingh64/">Instragram</a></li>
         </ul>
-
     </footer>
 </body>
 
