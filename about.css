@@ -171,7 +171,7 @@ h1 {
 .background {
     grid-area: bg;
     border-top: solid 1px #723130;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 img {
