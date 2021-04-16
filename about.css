@@ -148,9 +148,9 @@ h1 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
-    grid-template-areas: "it it hs" "bg bg bg" "ct ct ct";
+    grid-template-areas: "it it hs" "bg bg bg";
 }
 
 .headshot {
@@ -162,15 +162,10 @@ h1 {
     margin-right: 20px;
 }
 
-.content {
-    grid-area: ct;
-    border-top: solid 1px #723130;
-    margin-top: 0px;
-}
-
 .background {
     grid-area: bg;
     border-top: solid 1px #723130;
+    border-bottom: solid 1px #723130;
     margin-top: 0px;
 }
 
