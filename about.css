@@ -123,6 +123,10 @@ h1 {
     margin: 0 5px;
 }
 
+.background>li {
+    margin: 10px 0;
+}
+
 .content-footer>p {
     color: #F7EDE1;
 }
