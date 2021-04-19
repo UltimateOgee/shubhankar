@@ -1,6 +1,6 @@
 $(function () {
     var calcNewYear = setInterval(function () {
-        date_bday = new Date(1999, 4, 21, 0, 0, 0, 0);
+        date_bday = new Date(1999, 3, 28, 0, 0, 0, 0);
         date_now = new Date();
 
         seconds = Math.floor((date_now - (date_bday)) / 1000);
