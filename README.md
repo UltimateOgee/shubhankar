@@ -1,4 +1,4 @@
 # resume
-my resume for github pages
+simple resume site for github pages
 
-https://ultimateogee.github.io/resume/
+https://ultimateogee.github.io/shubhankar/about
