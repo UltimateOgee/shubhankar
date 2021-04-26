@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    clear: both;
 }
 
 ul.topnav {
@@ -58,7 +59,9 @@ section>h1 {
 }
 
 .masthead {
-    padding: 1em 0;
+    
+    
+    padding: 16px 0;
     background-color: #723130;
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,7 +97,40 @@ section>h1 {
     margin-top: 25px;
 }
 
-h1 {
+.contact-body {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-section {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 71px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goback {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.fakemasthead {
+    height: 75px;
+}
+
+.fakemasthead>button {
+    float: right;
+}
+
+.introduction>h1, .background>h1 {
     color: #723130;
 }
 
@@ -107,6 +143,10 @@ h1 {
     position: absolute;
     Width: 100%;
     bottom: 0;
+}
+
+.social {
+    padding-inline-start: 0px;
 }
 
 .social>li {
@@ -124,6 +164,10 @@ h1 {
     color: #F7EDE1;
 }
 
+.workrow>h2, .workrow>p, .tl>p, .tl>h2, .tr>p, .tr>h2, .bl>p, .bl>h2, .br>p, .br>h2 {
+    color: var(--cola);
+}
+
 @media only screen and (max-width: 500px) {
     .masthead {
         padding: 3em 0;
@@ -139,9 +183,61 @@ h1 {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "it it hs";
+    margin-bottom: 20px;
+}
+
+.work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "desc desc ph";
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 2px solid var(--cola);
+    padding: 20px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
-    grid-template-areas: "it it hs" "bg bg bg";
+    grid-template-areas: "tl tr" "bl br";
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tl, .tr, .bl, .br {
+    border-radius: 25px;
+    border: 2px solid var(--cola);
+    padding: 20px;
+    margin: 20px;
+    height: 216px;
+}
+
+.tl:hover, .tr:hover, .bl:hover, .br:hover {
+    background-color: var(--colc);
+}
+
+.tl {
+    grid-area: tl;
+}
+
+.tr {
+    grid-area: tr;
+}
+
+.bl {
+    grid-area: bl;
+}
+
+.br {
+    grid-area: br;
 }
 
 .headshot {
@@ -153,11 +249,23 @@ h1 {
     margin-right: 20px;
 }
 
+.workrow {
+    grid-area: desc;
+    margin-right: 20px;
+}
+
+.workph {
+    grid-area: ph;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .background {
-    grid-area: bg;
+    width: 100%;
     border-top: solid 1px #723130;
     border-bottom: solid 1px #723130;
-    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 img {
@@ -169,15 +277,79 @@ img {
     min-height: 100vh;
 }
 
-#content-wrap {
-    padding-bottom: 1.5rem;
-}
-
 .footer {
     position: fixed;
+    overflow: auto;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #723130;
     text-align: center;
- }
+}
+
+.tester {
+    color: #503232
+}
+
+:root {
+    --cola: #F7EDE1;
+    --colb: #572726;
+    --colc: #503232;
+    --cold: #333;
+    --cole: #252525;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    font-size: 1em;
+    color: var(--cola);
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+button.big-button {
+    margin-right: 25px;
+    display: inline-block;
+    border: 2px solid var(--cola);
+    border-radius: 1em;
+    background: var(--cole);
+    transform-style: preserve-3d;
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button.big-button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--colc);
+    border-radius: inherit;
+    var(--cola);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button.big-button:hover {
+    background: var(--cold);
+    transform: translate(0, 0.375em);
+}
+
+button.big-button:hover::before {
+    transform: translate3d(0, 0.75em, -1em);
+}
+
+button.big-button:active {
+    transform: translate(0em, 0.75em);
+}
+
+button.big-button:active::before {
+    transform: translate3d(0, 0, -1em);
+}

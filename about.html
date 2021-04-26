@@ -1,73 +1,168 @@
 <html lang="en" style="width:100%; height:100%;">
 
 <head>
-    <meta name="viewport" content="text/html">
-    <!-- Script -->
-    <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
+    <meta name="viewport">
+    <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js'></script>
     <script src='bday.js' type="text/javascript"></script>
+    <script src='connect_animations.js' type="text/javascript"></script>
+    <!--
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <link href="https://rawgit.com/shaneapen/Image-Preview-for-Links/master/image_preview_for_links.css"
+            rel="stylesheet">
+        <script type="text/javascript">
+            $(function () {
+                $('#p1 a').miniPreview({ prefetch: 'pageload' });
+                $('#p2 a').miniPreview({ prefetch: 'parenthover' });
+                $('#p3 a').miniPreview({ prefetch: 'none' });
+            });
+        </script>
+        <script src="https://rawgit.com/shaneapen/Image-Preview-for-Links/master/image_preview_for_links.js"></script>
+    -->
     <link rel="stylesheet" href="about.css">
     <title>Shubhankar's Resume</title>
 </head>
 
 <body>
-    <div id="page-container">
-        <div id="content-wrap">
-            <ul class="topnav">
-                <li><a href="/shubhankar/about">About</a></li>
-                <li><a href="/shubhankar">Resume</a></li>
-            </ul>
+    <div id="page-container" class="fullpage">
+        <ul class="topnav">
+            <li><a href="/shubhankar/about">About</a></li>
+            <li><a href="/shubhankar">Resume</a></li>
+        </ul>
+        <div id="content-wrap" class="true-body">
             <header class='masthead'>
                 <p class='masthead-intro'>Hi I'm</p>
                 <h1 class='masthead-heading'>Shubhankar Singh</h1>
             </header>
-            <section class="introduction-section">
-                <div class="grid-container">
-                    <div class="headshot">
-                        <img src="square_headshot.png" alt="Shubhankar Singh Headshot" style="width:200px">
-                    </div>
-                    <div class="introduction">
-                        <h1>Introduction</h1>
-                        <p style="line-height:1.5">Computer Science undergrad with a minor in Business Administration from <a target="_blank"
-                                rel="noopener noreferrer" href="https://www.trinity.edu/">Trinity University</a>. 2+
-                            years of professional software engineering experience.
-                            I value fostering meaningful relationships and driving projects that deliver impact. If these
-                            align with you, let's connect!
-                        <p>
+            <div class="true-body-nomast">
+                <section class="introduction-section">
+                    <div class="grid-container">
+                        <div class="headshot">
+                            <img src="square_headshot.png" alt="Shubhankar Singh Headshot" style="width:200px">
+                        </div>
+                        <div class="introduction">
+                            <h1>Introduction</h1>
+                            <p style="line-height:1.5">Computer Science undergrad with a minor in Business
+                                Administration
+                                from <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.trinity.edu/">Trinity
+                                    University</a>. 2+
+                                years of professional software engineering experience.
+                                I value fostering meaningful relationships and driving projects that deliver impact. If
+                                these
+                                align with you, let's connect!
+                            <p>
+                        </div>
                     </div>
                     <div class="background">
                         <h1>Background</h1>
-                        <!--<p style="line-height:0.7">Some quick facts:</p>
-                        <ul style="line-height:1.5">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>-->
-                        <p>Improved software in technology, financial, and energy industries. Prefer work in technology.</p>
-                        <p>Been to 5 countries and 13 states. Brought up in the Greater Seattle Area until moving to San Antonio for college. Currently living near Seattle working remotely but open to relocation.</p>
+                        <p>Improved software in technology, financial, and energy industries. Prefer work in technology.
+                        </p>
+                        <p>Been to 5 countries and 13 states. Brought up in the Greater Seattle Area until moving to San
+                            Antonio for college. Currently living near Seattle working remotely but open to relocation.
+                        </p>
                         <p>Can speak Hindi, English, and some Spanish.</p>
-                        <p><div id="time">Loading Age...</div></p>
+                        <p>
+                        <div id="time">Loading Age...</div>
+                        <p>Improved software in technology, financial, and energy industries. Prefer work in technology.
+                        </p>
+                        <p>Been to 5 countries and 13 states. Brought up in the Greater Seattle Area until moving to San
+                            Antonio for college. Currently living near Seattle working remotely but open to relocation.
+                        </p>
                     </div>
-                    <div class="content">
-                        <!--<h1>Work History</h1>
-                      const  <p>After reading my resume, people often need to research the
-                            various companies I have worked for. Here's an overview:
-                        </p>-->
+                </section>
+                <section class="button-section">
+                    <div class="center">
+                        <button class="big-button" onclick="location.href='https://ultimateogee.github.io/shubhankar/';"
+                            value="Go to Resume">View Resume</button>
+                        <button class="big-button"
+                            onclick="location.href='https://github.com/UltimateOgee/shubhankar/raw/main/Shubhankar_Singh_Resume.pdf';"
+                            value="Go to Resume">Download Resume</button>
+                        <!--work history is under construction-->
+                        <!--<button class="big-button history">Work History</button>-->
+                        <button class="big-button connect">Let's Connect</button>
                     </div>
-            </section>
+                </section>
+                <div class="fakemasthead"></div>
+            </div>
         </div>
-        <footer class="footer">
-            <ul class="social">
-                <li><a class="footerlinks" href="mailto:ssingh3@trinity.edu">Email</a></li>
-                <li><a class="footerlinks" target="_blank" rel="noopener noreferrer"
-                        href="https://www.linkedin.com/in/shubhankarsingh3">LinkedIn</a></li>
-                <li><a class="footerlinks" target="_blank" rel="noopener noreferrer"
-                        href="https://github.com/UltimateOgee">GitHub</a></li>
-                <li><a class="footerlinks" target="_blank" rel="noopener noreferrer"
-                        href="https://www.instagram.com/shubhsingh64/">Instragram</a></li>
-            </ul>
-        </footer>
+        <div class="history-body">
+            well shwabble my dabble
+            <div class="fakemasthead">
+                <button class="big-button goback">Go Back</button>
+            </div>
+        </div>
+        <div class="contact-body">
+            <div class="fakemasthead">
+                <button class="big-button goback">Go Back</button>
+            </div>
+            <h1 style="color:#F7EDE1">Let's Connect</h1>
+            <!--
+            <div class="work-container">
+                <div class="workph">
+                    <img src="square_headshot.png" alt="Shubhankar Singh Headshot" style="width:150px">
+                </div>
+                <div class="workrow">
+                    <h2>Willow Tree Apps</h2>
+                    <p style="line-height:1.5">I like to keep my inbox at zero, so email is a great way to reach out.
+                        And of course, feel free to connect with me on any other social media platforms you prefer!
+                    <p>
+                </div>
+            </div>
+            -->
+            <div class="contact-container">
+                <a class="footerlinks" href="mailto:ssingh3@trinity.edu">
+                    <div class="tl">
+                        <h2>Email</h2>
+                        <p style="line-height:1.5">I like to keep my inbox at zero, so email is a great way to reach
+                            out.
+                        <p>
+                    </div>
+                </a>
+                <a class="footerlinks" target="_blank" rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/shubhankarsingh3">
+                    <div class="tr">
+                        <h2>LinkedIn</h2>
+                        <p style="line-height:1.5">For further reading beyond my resume. Also, feel free to connect if
+                            we aren't already!
+                        <p>
+                    </div>
+                </a>
+                <a class="footerlinks" target="_blank" rel="noopener noreferrer" href="https://github.com/UltimateOgee">
+                    <div class="bl">
+                        <h2>GitHub</h2>
+                        <p style="line-height:1.5">Most of my impressive code isn't on GitHub! At least you'll get a
+                            preview. You can also find
+                            on there.
+                        <p>
+                    </div>
+                </a>
+                <a class="footerlinks" target="_blank" rel="noopener noreferrer"
+                    href="https://www.instagram.com/shubhsingh64/">
+                    <div class="br">
+                        <h2>Instragram</h2>
+                        <p style="line-height:1.5">Feel like gaining some insight into my hobbies? Follow me on insta
+                            @shubhsingh64
+                        <p>
+                    </div>
+                </a>
+            </div>
+            <div class="fakemasthead">
+                <!--This is being used as a spacer so when the user scrolls down, they don't bottom out the page-->
+            </div>
+        </div>
     </div>
 </body>
+<footer class="footer">
+    <ul class="social">
+        <li><a class="footerlinks" href="mailto:ssingh3@trinity.edu">Email</a></li>
+        <li><a class="footerlinks" target="_blank" rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/shubhankarsingh3">LinkedIn</a></li>
+        <li><a class="footerlinks" target="_blank" rel="noopener noreferrer"
+                href="https://github.com/UltimateOgee">GitHub</a></li>
+        <li><a class="footerlinks" target="_blank" rel="noopener noreferrer"
+                href="https://www.instagram.com/shubhsingh64/">Instragram</a></li>
+    </ul>
+</footer>
 
 </html>
