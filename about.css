@@ -332,7 +332,6 @@ button.big-button::before {
     bottom: 0;
     background: var(--colc);
     border-radius: inherit;
-    var(--cola);
     transform: translate3d(0, 0.75em, -1em);
     transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
