@@ -1,8 +1,8 @@
 $(document).ready(function () {
     'use strict';
 
-    $(".history-body").fadeOut();
-    $(".contact-body").fadeOut();
+    $(".history-body").hide();
+    $(".contact-body").hide();
     $("footer").css("z-index", "0");
     $("masthead").css("z-index", "0");
 
@@ -13,18 +13,17 @@ $(document).ready(function () {
         $(".masthead-intro").fadeOut();
         $(".masthead-heading").fadeOut();
         $(".masthead").animate({
-            height: $(".fullpage").height()
+            height: $(".fullpage").height()*2.15
         });
-        //const newh = $(".fullpage").height() - $(".topnav").height();
+        const newh = $(".timeline").height();
         $('masthead')
             .delay(50)
             .queue(function (next) {
-                $(this).css('height', '100%');
+                $(this).css('height', '215%');
                 $(this).css("z-index", "-1");
                 next();
             });
-        //hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm...........
-        //$(".history-body").delay(100).fadeIn();
+        $(".history-body").delay(500).fadeIn();
     });
 
     $(".connect").click(function () {
@@ -40,11 +39,11 @@ $(document).ready(function () {
             .delay(50)
             .queue(function (next) {
                 $(this).css('height', '100%');
-                $("footer").css("z-index", "-1");
+                $(this).css("z-index", "-1");
                 next();
             });
     });
-    $(".goback").click(function () {
+    $(".goback-connect").click(function () {
         $(".contact-body").fadeOut();
         $(".social").fadeIn();
         $(".true-body").delay(500).fadeIn();
@@ -56,6 +55,26 @@ $(document).ready(function () {
             .queue(function (next) {
                 $(this).css('height', '50.5px');
                 $("footer").css("z-index", "0");
+                next();
+            });
+    });
+    $(".goback-history").click(function () {
+        $(".history-body").fadeOut();
+
+        $(".true-body-nomast").fadeIn();
+        $(".social").fadeIn();
+        $(".footer").fadeIn();
+        $(".masthead-intro").delay(500).fadeIn();
+        $(".masthead-heading").delay(500).fadeIn();
+        $(".masthead").animate({
+            height: 144.102
+        });
+        //const newh = $(".fullpage").height() - $(".topnav").height();
+        $('masthead')
+            .delay(50)
+            .queue(function (next) {
+                $(this).css('height', '144.102px');
+                $(this).css("z-index", "0");
                 next();
             });
     });
