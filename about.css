@@ -84,7 +84,7 @@ section>h1 {
     margin-bottom: 20px;
 }
 
-.introduction>p, .content-footer>p {
+.introduction>p, .content-footer>p, .background>p {
     font-weight: 300;
     letter-spacing: 0.05em;
 }
