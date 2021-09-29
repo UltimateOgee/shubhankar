@@ -13,7 +13,7 @@ $(document).ready(function () {
         $(".masthead-intro").fadeOut();
         $(".masthead-heading").fadeOut();
         $(".masthead").animate({
-            height: $(".fullpage").height()*2.15
+            height: $(".fullpage").height()*2.75 //change this factor to make the page larger or smaller!
         });
         const newh = $(".timeline").height();
         $('masthead')

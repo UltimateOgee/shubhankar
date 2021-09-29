@@ -391,6 +391,7 @@ button.big-button:active::before {
     margin-top: 50px;
     padding-left: 200px;
     text-align: center;
+    margin-bottom: 200px;
 }
 
 /* Timeline */
