@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Scavenger Hunt ❤️</title>
+    <link rel="stylesheet" href="scavenger.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💖 Valentine's Scavenger Hunt for Anny 💖</h1>
+        <p id="progress">Progress: 0 / 8</p>
+        
+        <div id="riddle-container">
+            <p id="riddle">You will need to solve each puzzle to find the next code. Good luck babe!
+                <br>Make sure you remember each code in case you refresh this page and lose your progress.
+                <br>The only rule is you cannot try to find the next code randomly. You must solve the riddle to get the code.
+                <br>I have a surprise for you at the end. So don't give up! 😘
+                <br>I love you! ❤️
+                </p>
+            <input type="text" id="code-input" placeholder="Enter passcode" disabled>
+            <button id="submit-btn" disabled>Submit</button>
+        </div>
+
+        <button id="start-btn">Start Hunt</button>
+    </div>
+
+    <!-- Fireworks & Confetti Animation -->
+    <div id="fireworks-container"></div>
+    <audio id="firework-sound" src="sound.wav"></audio>
+
+    <script src="scavenger.js"></script>
+</body>
+</html>
